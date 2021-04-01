@@ -1,0 +1,164 @@
+<html>
+<head>
+<title>Healthcare diagnostics</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+/>
+<link
+  href="https://fonts.googleapis.com/css?family=Montserrat"
+  rel="stylesheet"
+/>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+
+<style>
+  body {
+    font: 15px Montserrat, sans-serif;
+    line-height: 1.8;
+    color: black;
+  }
+  /*body{
+    background: lightgrey;
+  }*/
+
+  }
+   p:hover{
+    color: red;}
+    p{
+    font-size: 16px;
+    color: black;
+    padding-top:20px;
+    padding-left: 15px;
+  }
+  .margin {
+    margin-bottom: 45px;
+  }
+  .bg-1 {
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+    padding-top:20px;
+  }
+  .bg-2 {
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+  }
+  .bg-3 {
+    background-color: #ffffff; /* White */
+    color: #555555;
+  }
+  default .bg-4 {
+    background-color: #2f2f2f; /* Black Gray */
+    color: #fff;
+  }
+  .container-fluid {
+    padding-top: 40px;
+    padding-bottom: 300px;
+  }
+  .navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+  }
+  .navbar-nav li a:hover {
+    color: #1abc9c !important;
+  }
+  #existing{
+    width: 700px;
+    display: inline-block;
+    margin: 20px auto;
+  }
+  form {
+  	padding-top: 2%;
+  	padding-left: 2%;
+  	padding-right: 2%;
+  	padding-bottom: 2%;
+  	border-width: medium;
+  	border-color:navy;
+  	border-style: solid;
+  	margin-left: 20%;
+  	margin-right: 20%;
+  }
+  
+  .input1{
+  	margin-left: 30%;
+    /*padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;*/
+  }
+  .input2{
+  	margin-left: 40%;
+
+  }
+  input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+} 
+  img{
+  	margin-left: 15%;
+  	width: 400px;
+  	height: 300px;
+  }
+</style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <button
+        type="button"
+        class="navbar-toggle"
+        data-toggle="collapse"
+        data-target="#myNavbar"
+      >
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<p>WCE diagnostics tool. Please browse and upload the file to be processed and click on process.</p><br>
+<img class='body1' src="https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2013/11/15/17/43/ds00319_-my00139_im04443_mcdc7_capsuleendoscopythu_jpg.jpg" align="left">
+<img class='body1' src="https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2013/08/26/10/06/my00139_im00140_d7_smallintestinethu_jpg.jpg" align="center"><br><br>
+
+<form action="w.html" method="POST" enctype="multipart/form-data">
+  <label>Patient id:</label>
+  <input type="string" name="p_id"><br><br>
+  <!-- <label for ='file'>Select file:</label> -->
+  <label for="file" class="custom-file-upload">
+  <i class="fa fa-cloud-upload"></i> Upload file
+  </label>
+  <input type="file" name="file" id="file"/>
+  <input class="input2" type="submit" value="Process file" name="submit"><br>
+</form>
+
+</html>
